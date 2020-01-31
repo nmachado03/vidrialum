@@ -1,0 +1,343 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+}
+
+
+/* Menu Navegacion */
+
+.inicio nav{
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.icono{
+    display: none;
+}
+
+.enlaces{
+    display: flex;
+    height: 100%;
+    width: 30%;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.enlaces a{
+    border-top: 1px solid transparent;
+    border-bottom: 1px solid transparent;
+    padding: 4px 0;
+    transition: 0.7s ease-out;
+    color: #fff;
+    text-decoration: none;
+}
+
+.enlaces a:hover , .active{
+    border-top: 1px solid #FF9203;
+    border-bottom: 1px solid #FF9203;
+}
+
+nav .logo{
+    height: 100%;
+    margin-left: 20px;
+    display: flex;
+    align-items: center;
+    color: #fff;
+    font-size: 20px;
+}
+
+nav .logo img{
+    object-fit: cover;
+    height: inherit;
+}
+
+@media screen and (max-width:750px){
+    .icono{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 70px;
+        color: #fff;
+        padding: 20px;
+        z-index: 100;
+        cursor: pointer;
+        margin-right: 40px;
+    }
+
+    .enlaces{
+        position: fixed;
+        z-index: 1;
+        height: 100vh;
+        right: 0;
+        width: 100%;
+        flex-direction: column;
+        transition: all 1s ease;
+        background: #19D755; /* fallback for old browsers */
+        background: -webkit-linear-gradient(to right, #19D755, #FF9203); /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(to right, #19D755, #FF9203); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    }
+    .uno{
+        -webkit-clip-path:circle(0% at 98% 0%);
+        clip-path: circle(0% at 100% 0%);
+
+    }
+
+    .dos{
+        -webkit-clip-path:circle(150% at 100% 0%);
+        clip-path: circle(150% at 100% 0%);
+    }
+
+
+}
+
+/* Section: Inicio */
+
+.inicio{
+    background-image: linear-gradient(to left, rgba(79, 204, 1, 0.342) 0%, rgba(245, 99, 1, 0.418) 100%), url('../img/ventana-mdeo.jpg');
+    width: 100%;
+    height: 650px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+    background-attachment: fixed;
+    position: relative;
+    overflow: hidden;
+}
+
+
+.texto-inicio{
+    height: 500px;
+    color:#fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.texto-inicio h1{
+    font-size: 60px;
+}
+
+.texto-inicio p{
+    font-size: 25px;
+    margin-bottom: 30px ;
+}
+
+.texto-inicio a{
+    display: inline-block;
+    text-decoration: none;
+    padding: 12px 15px;
+    background: #fff;
+    border-radius: 8px;
+    color: #19D755;
+}
+.svg-inicio{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+
+@media screen and (max-width: 800px){
+    .texto-inicio h1{
+        text-align: center;
+        font-size: 50px;
+    }
+
+    .texto-inicio p{
+        padding: 5px;
+    }
+}
+
+/* Estilos Generales */
+
+.contenedor, .wave-contenedor{
+    width: 90%;
+    max-width: 1000px;
+    overflow: hidden;
+    margin: auto;
+    padding: 0 0 80px 0;
+}
+.contenedor{
+    padding: 80px 0 80px 0;
+}
+
+.titulo{
+    font-weight: 300;
+    font-size: 35px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+.titulo.left{
+    text-align: left;
+}
+.titulo.right{
+    text-align: right;
+}
+
+@media screen and (max-width: 800px){
+    .titulo{
+        font-size: 35px;
+    }
+    .titulo.left, .titulo.right{
+        text-align: center;
+    }
+}
+
+
+/* Section: Description */
+.website{
+    display: flex;
+    justify-content: space-between;
+}
+
+.website img{
+    width: 48%;
+}
+
+.website .contenedor-textos-main{
+    width: 40%;
+    margin-top: 4%;
+}
+
+.parrafo{
+    text-align: justify;
+    margin-bottom: 20px;
+}
+
+@media screen and (max-width: 800px){
+    .website{
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+    }
+    .website img{
+        width: 100%;
+    }
+
+    .website .contenedor-textos-main{
+        width: 100%;
+    }
+}
+
+/* Section: Nuestros Servicios */
+.content-cards{
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+.card{
+    width: 30%;
+    text-align: center;
+    height: 280px;
+    box-shadow: 0 0 3px 0 rgba(0, 0, 0, .5);
+    transform: scale(1);
+    transition: transform 0.6s;
+}
+
+.card:hover{
+    box-shadow: 0 0 6px 0 rgba(0, 0, 0, .5);
+    transform: scale(1.03);
+}
+
+.card  img{
+    height: 100%;
+    width: 100%;
+}
+
+@media screen and (max-width: 800px){
+    .card{
+        width: 90%;
+        height: 30%;
+        margin-bottom: 20px;
+    }
+}
+
+
+/* Section: Galeria */
+
+.contenedor-imagenes{
+    display: flex;
+    width: 85%;
+    margin: auto;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    border-radius: 3px;
+}
+
+.contenedor-imagenes .imagen{
+    width: 32%;
+    position: relative;
+    height: 250px;
+    margin-bottom: 5px;
+    box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, .75);
+}
+
+.contenedor-imagenes .imagen img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.overlay{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: rgba(25, 215, 85, 0.404);
+    width: 100%;
+    height: 0;
+    overflow: hidden;
+    transition:.5s ease;
+}
+
+.overlay h2{
+    color: #fff;
+    font-size: 30px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    text-align: center;
+    transform: translate(-50%, -50%);
+}
+
+.imagen:hover .overlay{
+    height: 100%;
+    cursor: pointer;
+}
+
+@media screen and (max-width:10000px){
+    .contenedor-imagenes{
+        width: 95%;
+    }
+}
+
+@media screen and (max-width:700px){
+    .contenedor-imagenes{
+        width: 90%;
+    }
+    .contenedor-imagenes .imagen{
+        width: 48%;
+    }
+}
+
+@media screen and (max-width:450px){
+
+    .contenedor-imagenes{
+        width: 98%;
+    }
+    .contenedor-imagenes .imagen{
+        width: 80%;
+    }
+}
