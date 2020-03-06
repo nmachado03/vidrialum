@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
@@ -8,11 +8,12 @@
     <title>Empresa VIDRIALUM</title>
     <link rel="stylesheet" href="/assets/styles/style.css">
     <script src="https://kit.fontawesome.com/27ff33fad7.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 </head>
 
 <body>
     <header class="inicio">
-        <nav>
+        <nav id="nav">
             <div class="logo">
                 <p>VIDRIALUM</p>
                 <img src="/assets/img/LOGO-DE-VIDRIALUM1.0.png" alt="">
@@ -61,7 +62,7 @@
             </article>
             <article class="card">
                 <div class="imagen">
-                    <img src="/assets/img/ventana-mdeo.jpg" alt="">
+                    <img src="/assets/img/escuadra-aluminio.jpg" alt="">
                 </div>
                 <h3>Cerramientos</h3>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam.</p>
@@ -78,44 +79,51 @@
     <section class="galeria">
         <div class="contenedor">
             <h2 class="titulo">Algunos de Nuestros Trabajos</h2>
+            <div class="filters">
+                <button class="filter" data-filter="todos">Todos</button>
+                <button class="filter" data-filter="coperativas">Coperativas</button>
+                <button class="filter" data-filter="ventanas">Ventanas</button>
+                <button class="filter" data-filter="particulares">Particulares</button>
+                <button class="filter" data-filter="otros">Otros</button>
+            </div>
             <div class="contenedor-imagenes">
-                <div class="imagen">
+                <div class="imagen todos todos coperativas ventanas">
                     <img src="/assets/img/ventana-mdeo.jpg" alt="">
                     <div class="overlay">
                         <h2>COperativa tal</h2>
                     </div>
                 </div>
-                <div class="imagen">
+                <div class="imagen todos ventanas">
                     <img src="/assets/img/ventana-mdeo.jpg" alt="">
                     <div class="overlay">
                         <h2>COperativa tal</h2>
                     </div>
                 </div>
-                <div class="imagen">
+                <div class="imagen todos particulares">
                     <img src="/assets/img/ventana-mdeo.jpg" alt="">
                     <div class="overlay">
                         <h2>COperativa tal</h2>
                     </div>
                 </div>
-                <div class="imagen">
+                <div class="imagen todos coperativas">
                     <img src="/assets/img/ventana-mdeo.jpg" alt="">
                     <div class="overlay">
                         <h2>COperativa tal</h2>
                     </div>
                 </div>
-                <div class="imagen">
+                <div class="imagen todos particulares">
                     <img src="/assets/img/ventana-mdeo.jpg" alt="">
                     <div class="overlay">
                         <h2>COperativa tal</h2>
                     </div>
                 </div>
-                <div class="imagen">
+                <div class="imagen todos coperativas">
                     <img src="/assets/img/ventana-mdeo.jpg" alt="">
                     <div class="overlay">
                         <h2>COperativa tal</h2>
                     </div>
                 </div>
-                <div class="imagen">
+                <div class="imagen todos otros">
                     <img src="/assets/img/ventana-mdeo.jpg" alt="">
                     <div class="overlay">
                         <h2>COperativa tal</h2>
